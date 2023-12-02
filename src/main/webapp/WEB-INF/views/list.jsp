@@ -13,6 +13,7 @@
     <th>RegDate</th>
     <th>Edit</th>
     <th>Delete</th>
+    <th>More</th>
   </tr>
   <c:forEach items = "${list}" var = "u">
     <tr>
@@ -28,6 +29,11 @@
         </button>
       </td>
       <td><a href = "javascript:delete_ok('${u.seq}')">Delete</a></td>
+      <td>
+        <button type="button" onclick="location.href='posts/${u.seq}'">
+          자세히
+        </button>
+      </td>
     </tr>
   </c:forEach>
 </table>

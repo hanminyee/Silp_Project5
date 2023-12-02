@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>add new post</title>
+  <title>add new post</title>
 </head>
 <body>
 <form action="addok" method="POST">
