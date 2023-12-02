@@ -17,6 +17,7 @@
     <tr><td>제목</td><td><input type="text" name="title"/></td></tr>
     <tr><td>글쓴이</td><td><input type="text" name="writer"/></td></tr>
     <tr><td>내용</td><td><textarea cols="50" rows="5" name="content"></textarea></td></tr>
+    <input type="hidden" name="regDate" value="<%= new java.text.SimpleDateFormat("yyyy-MM-dd").format(new java.util.Date()) %>">
   </table>
   <button type="submit">게시글 등록</button>
   <button type="button" onclick="location.href='list'">목록보기</button>
