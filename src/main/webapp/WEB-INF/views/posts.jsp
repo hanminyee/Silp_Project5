@@ -8,10 +8,13 @@
 <body>
 <h1>자세히 보기</h1>
 <table class="table table-bordered">
-  <tr><td>제목: </td><td><c:out value="${u.title}" /></td></tr>
-  <tr><td>글쓴이: </td><td><c:out value="${u.writer}" /></td></tr>
-  <tr><td>내용: </td><td><c:out value="${u.content}" /></td></tr>
-  <tr><td>등록일: </td><td><c:out value="${u.regDate}" /></td></tr>
+  <tr><td>책 제목: </td><td><c:out value="${u.bookTitle}" /></td></tr>
+  <tr><td>저자: </td><td><c:out value="${u.bookWriter}" /></td></tr>
+  <tr><td>출판사: </td><td><c:out value="${u.publisher}" /></td></tr>
+  <tr><td>등록일: </td><td><c:out value="${u.publicationDate}" /></td></tr>
+  <tr><td>등록번호: </td><td><c:out value="${u.regNumber}" /></td></tr>
+  <tr><td>ISBN: </td><td><c:out value="${u.isbn}" /></td></tr>
+  <tr><td>남은 책 갯수: </td><td><c:out value="${u.leftBook}" /></td></tr>
 </table>
 </body>
 </html>

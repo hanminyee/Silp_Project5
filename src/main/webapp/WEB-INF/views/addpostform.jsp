@@ -13,14 +13,16 @@
 <body>
 <form action="addok" method="POST">
   <table id = "edit">
-    <tr><td>카테고리</td><td><input type="text" name="category"/></td></tr>
-    <tr><td>제목</td><td><input type="text" name="title"/></td></tr>
-    <tr><td>글쓴이</td><td><input type="text" name="writer"/></td></tr>
-    <tr><td>내용</td><td><textarea cols="50" rows="5" name="content"></textarea></td></tr>
-    <input type="hidden" name="regDate" value="<%= new java.text.SimpleDateFormat("yyyy-MM-dd").format(new java.util.Date()) %>">
+    <tr><td>책 제목</td><td><input type="text" name="bookTitle"/></td></tr>
+    <tr><td>책 저자</td><td><input type="text" name="bookWriter"/></td></tr>
+    <tr><td>출판사</td><td><input type="text" name="publisher"/></td></tr>
+    <tr><td>등록번호</td><td><input type="text" name="regNumber"/></td></tr>
+    <tr><td>ISBN</td><td><input type="text" name="isbn"/></td></tr>
+    <tr><td>남은 책 갯수</td><td><input type="text" name="leftBook"/></td></tr>
+    <input type="hidden" name="publicationDate" value="<%= new java.text.SimpleDateFormat("yyyy-MM-dd").format(new java.util.Date()) %>">
   </table>
-  <button type="submit">게시글 등록</button>
-  <button type="button" onclick="location.href='list'">목록보기</button>
+  <button type="submit">책 등록하기</button>
+  <button type="button" onclick="location.href='list'">책 목록보기</button>
 </form>
 </body>
 </html>

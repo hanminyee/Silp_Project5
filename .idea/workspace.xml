@@ -9,12 +9,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a0d38e8-2150-47a5-b0e4-f8f7e671ccd1" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/posts.jsp" afterDir="false" />
+    <list default="true" id="0a0d38e8-2150-47a5-b0e4-f8f7e671ccd1" name="변경" comment="자세히보기 추가">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/board/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/board/BoardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/board/BoardDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/board/BoardDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/board/BoardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/board/BoardServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/board/BoardVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/board/BoardVO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/addpostform.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/addpostform.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/editform.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/editform.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/posts.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/posts.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,7 +208,9 @@
       <workItem from="1701419198603" duration="11162000" />
       <workItem from="1701436242807" duration="816000" />
       <workItem from="1701496164344" duration="417000" />
-      <workItem from="1701519779830" duration="176000" />
+      <workItem from="1701519779830" duration="429000" />
+      <workItem from="1701759169347" duration="2523000" />
+      <workItem from="1701762633301" duration="1792000" />
     </task>
     <task id="LOCAL-00001" summary="레전드">
       <option name="closed" value="true" />
@@ -223,7 +228,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701496397147</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="자세히보기 추가">
+      <option name="closed" value="true" />
+      <created>1701520020130</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1701520020130</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -231,6 +244,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="레전드" />
-    <option name="LAST_COMMIT_MESSAGE" value="레전드" />
+    <MESSAGE value="자세히보기 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="자세히보기 추가" />
   </component>
 </project>

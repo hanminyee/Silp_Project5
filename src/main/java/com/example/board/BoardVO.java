@@ -4,12 +4,13 @@ import java.sql.Date;
 
 public class BoardVO {
     private int seq;
-    private String category;
-    private String title;
-    private String writer;
-    private String content;
-    private Date regDate;
-    private int cnt;
+    private String bookTitle;
+    private String bookWriter;
+    private String publisher;
+    private String regNumber;
+    private String isbn;
+    private Date publicationDate;
+    private int leftBook;
 
     public int getSeq() {
         return seq;
@@ -18,44 +19,59 @@ public class BoardVO {
         this.seq = seq;
     }
 
-    public String getCategory() {
-        return category;
+    public String getBookTitle() {
+        return bookTitle;
     }
 
-    public void setCategory(String category) {
-        this.category = category;
+    public void setBookTitle(String bookTitle) {
+        this.bookTitle = bookTitle;
     }
 
-    public String getTitle() {
-        return title;
+    public String getBookWriter() {
+        return bookWriter;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setBookWriter(String bookWriter) {
+        this.bookWriter = bookWriter;
     }
 
-    public String getWriter() {
-        return writer;
+    public String getPublisher() {
+        return publisher;
     }
 
-    public void setWriter(String writer) {
-        this.writer = writer;
+    public void setPublisher(String publisher) {
+        this.publisher = publisher;
     }
 
-    public String getContent() {
-        return content;
+    public String getRegNumber() {
+        return regNumber;
     }
 
-    public void setContent(String content) {
-        this.content = content;
+    public void setRegNumber(String regNumber) {
+        this.regNumber = regNumber;
     }
 
-    public Date getRegDate() {
-        return regDate;
+    public String getIsbn() {
+        return isbn;
     }
 
-    public void setRegDate(Date regDate) {
-        this.regDate = regDate;
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
     }
 
+    public Date getPublicationDate() {
+        return publicationDate;
+    }
+
+    public void setPublicationDate(Date publicationDate) {
+        this.publicationDate = publicationDate;
+    }
+
+    public int getLeftBook() {
+        return leftBook;
+    }
+
+    public void setLeftBook(int leftBook) {
+        this.leftBook = leftBook;
+    }
 }

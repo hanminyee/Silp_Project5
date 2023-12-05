@@ -6,11 +6,13 @@
 <table id = "list" width = "90%">
   <tr>
     <th>seq</th>
-    <th>ID</th>
-    <th>Category</th>
-    <th>Title</th>
-    <th>Content</th>
-    <th>RegDate</th>
+    <th>bookTitle</th>
+    <th>bookWriter</th>
+    <th>publisher</th>
+    <th>publicationDate</th>
+    <th>regNumber</th>
+    <th>ISBN</th>
+    <th>leftBook</th>
     <th>Edit</th>
     <th>Delete</th>
     <th>More</th>
@@ -18,11 +20,13 @@
   <c:forEach items = "${list}" var = "u">
     <tr>
       <td>${u.seq}</td>
-      <td>${u.category}</td>
-      <td>${u.title}</td>
-      <td>${u.writer}</td>
-      <td>${u.content}</td>
-      <td>${u.regDate}</td>
+      <td>${u.bookTitle}</td>
+      <td>${u.bookWriter}</td>
+      <td>${u.publisher}</td>
+      <td>${u.publicationDate}</td>
+      <td>${u.regNumber}</td>
+      <td>${u.isbn}</td>
+      <td>${u.leftBook}</td>
       <td>
         <button type="button" onclick="location.href='editform/${u.seq}'">
           수정

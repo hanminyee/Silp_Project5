@@ -17,11 +17,14 @@ public class BoardDAO {
 
 
     public int insertBoard(BoardVO vo) {
-        String sql = "insert into BOARD (title, writer, content, regDate) values ("
-                + "'" + vo.getTitle() + "',"
-                + "'" + vo.getWriter() + "',"
-                + "'" + vo.getContent() + "',"
-                + "'" + vo.getRegDate() + "')";
+        String sql = "insert into BOARD (bookTItle, Bookwriter, publisher, publicationDate, regNumber, isbn, leftBook) values ("
+                + "'" + vo.getBookTitle() + "',"
+                + "'" + vo.getBookWriter() + "',"
+                + "'" + vo.getPublisher() + "',"
+                + "'" + vo.getPublicationDate() + "',"
+                + "'" + vo.getRegNumber() + "',"
+                + "'" + vo.getIsbn() + "',"
+                + "'" + vo.getLeftBook() + "')";
         return jdbcTemplate.update(sql);
     }
     public int deleteBoard(int seq) {
@@ -29,11 +32,15 @@ public class BoardDAO {
         return jdbcTemplate.update(sql);
     }
     public int updateBoard(BoardVO vo) {
-        String sql = "update BOARD set title ='" + vo.getTitle() + "',"
-                + " title='" + vo.getTitle() + "',"
-                + " writer='" + vo.getWriter() + "',"
-                + " content='" + vo.getContent() + "',"
-                + " regDate='" + vo.getRegDate() + "' where seq =" + vo.getSeq();
+        String sql = "update BOARD set title ='"
+                + vo.getBookTitle() + "',"
+                + " bookTitle='" + vo.getBookTitle() + "',"
+                + " bookWriter='" + vo.getBookWriter() + "',"
+                + " publisher='" + vo.getPublisher() + "',"
+                + " publicationDate='" + vo.getPublicationDate() + "',"
+                + " regNumber='" + vo.getRegNumber() + "',"
+                + " isbn='" + vo.getIsbn() + "',"
+                + " leftBook='" + vo.getLeftBook() + "' where seq =" + vo.getSeq();
         return jdbcTemplate.update(sql);
     }
 
@@ -42,10 +49,13 @@ public class BoardDAO {
         public BoardVO mapRow(ResultSet rs, int rowNum) throws SQLException{
             BoardVO vo = new BoardVO();
             vo.setSeq(rs.getInt("seq"));
-            vo.setTitle(rs.getString("title"));
-            vo.setContent(rs.getString("content"));
-            vo.setWriter(rs.getString("writer"));
-            vo.setRegDate(rs.getDate("regdate"));
+            vo.setBookTitle(rs.getString("bookTitle"));
+            vo.setBookWriter(rs.getString("bookWriter"));
+            vo.setPublisher(rs.getString("publisher"));
+            vo.setPublicationDate(rs.getDate("publicationDate"));
+            vo.setRegNumber(rs.getString("regNumber"));
+            vo.setIsbn(rs.getString("isbn"));
+            vo.setLeftBook(rs.getInt("leftBook"));
             return vo;
         }
     }
@@ -55,7 +65,7 @@ public class BoardDAO {
 
     }
     public List<BoardVO> getBoardList() {
-        String sql = "select * from BOARD order by regdate desc";
+        String sql = "select * from BOARD order by publicationDate desc";
         return jdbcTemplate.query(sql, new BoardRowMapper());
     }
 }
