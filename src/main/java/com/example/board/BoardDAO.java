@@ -32,7 +32,7 @@ public class BoardDAO {
         return jdbcTemplate.update(sql);
     }
     public int updateBoard(BoardVO vo) {
-        String sql = "update BOARD set title ='"
+        String sql = "update BOARD set bookTitle ='"
                 + vo.getBookTitle() + "',"
                 + " bookTitle='" + vo.getBookTitle() + "',"
                 + " bookWriter='" + vo.getBookWriter() + "',"
