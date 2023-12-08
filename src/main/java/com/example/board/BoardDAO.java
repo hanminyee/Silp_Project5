@@ -17,10 +17,11 @@ public class BoardDAO {
 
 
     public int insertBoard(BoardVO vo) {
-        String sql = "insert into BOARD (bookTItle, Bookwriter, publisher, publicationDate, regNumber, isbn, leftBook) values ("
+        String sql = "insert into BOARD (bookTItle, Bookwriter, publisher, genre, publicationDate, regNumber, isbn, leftBook) values ("
                 + "'" + vo.getBookTitle() + "',"
                 + "'" + vo.getBookWriter() + "',"
                 + "'" + vo.getPublisher() + "',"
+//                + "'" + vo.getGenre() + "',"
                 + "'" + vo.getPublicationDate() + "',"
                 + "'" + vo.getRegNumber() + "',"
                 + "'" + vo.getIsbn() + "',"
@@ -37,6 +38,7 @@ public class BoardDAO {
                 + " bookTitle='" + vo.getBookTitle() + "',"
                 + " bookWriter='" + vo.getBookWriter() + "',"
                 + " publisher='" + vo.getPublisher() + "',"
+//                + " genre='" + vo.getGenre() + "',"
                 + " publicationDate='" + vo.getPublicationDate() + "',"
                 + " regNumber='" + vo.getRegNumber() + "',"
                 + " isbn='" + vo.getIsbn() + "',"
@@ -52,6 +54,7 @@ public class BoardDAO {
             vo.setBookTitle(rs.getString("bookTitle"));
             vo.setBookWriter(rs.getString("bookWriter"));
             vo.setPublisher(rs.getString("publisher"));
+//            vo.setGenre(rs.getString("genre"));
             vo.setPublicationDate(rs.getDate("publicationDate"));
             vo.setRegNumber(rs.getString("regNumber"));
             vo.setIsbn(rs.getString("isbn"));
