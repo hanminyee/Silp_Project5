@@ -18,7 +18,7 @@
     <tr><td>출판사</td><td><input type="text" name="publisher"/></td></tr>
     <tr><td>등록번호</td><td><input type="text" name="regNumber"/></td></tr>
     <tr><td>ISBN</td><td><input type="text" name="isbn"/></td></tr>
-    <tr><td>남은 책 갯수</td><td><input type="text" name="leftBook"/></td></tr>
+    <tr><td>남은 책 갯수</td><td><input type="number" name="leftBook"/></td></tr>
     <input type="hidden" name="publicationDate" value="<%= new java.text.SimpleDateFormat("yyyy-MM-dd").format(new java.util.Date()) %>">
   </table>
   <button type="submit">책 등록하기</button>
