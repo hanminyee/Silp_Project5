@@ -203,7 +203,7 @@
       <workItem from="1701759169347" duration="2523000" />
       <workItem from="1701762633301" duration="1792000" />
       <workItem from="1701765580509" duration="207000" />
-      <workItem from="1702018724727" duration="1744000" />
+      <workItem from="1702018724727" duration="2076000" />
     </task>
     <task id="LOCAL-00001" summary="레전드">
       <option name="closed" value="true" />
@@ -245,7 +245,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702020380657</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="버그수정 및 남은 책 수 입력form을 number로 변경">
+      <option name="closed" value="true" />
+      <created>1702021108033</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1702021108033</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
