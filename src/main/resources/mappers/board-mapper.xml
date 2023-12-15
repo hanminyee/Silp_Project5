@@ -8,7 +8,7 @@
 </insert>
 <update id="updateBoard">
     update BOARD
-    set BookTitle=#{BookTitle}, bookWrite=#{bookWrite}, publisher=#{publisher}, regNumber=#{regNumber}, isbn=#{pisbn}, leftBook=#{leftBook}
+    set bookTitle=#{bookTitle}, bookWriter=#{bookWriter}, publisher=#{publisher}, regNumber=#{regNumber}, isbn=#{isbn}, leftBook=#{leftBook}
     where seq=#{seq}
 </update>
 <delete id="deleteBoard">
