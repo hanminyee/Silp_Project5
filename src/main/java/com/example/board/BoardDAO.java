@@ -1,5 +1,6 @@
 package com.example.board;
 
+import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
@@ -13,62 +14,28 @@ import java.util.List;
 public class BoardDAO {
 
     @Autowired
-    JdbcTemplate jdbcTemplate;
-
-
+    SqlSession sqlSession;
+  
     public int insertBoard(BoardVO vo) {
-        String sql = "insert into BOARD (bookTItle, Bookwriter, publisher, genre, publicationDate, regNumber, isbn, leftBook) values ("
-                + "'" + vo.getBookTitle() + "',"
-                + "'" + vo.getBookWriter() + "',"
-                + "'" + vo.getPublisher() + "',"
-//                + "'" + vo.getGenre() + "',"
-                + "'" + vo.getPublicationDate() + "',"
-                + "'" + vo.getRegNumber() + "',"
-                + "'" + vo.getIsbn() + "',"
-                + "'" + vo.getLeftBook() + "')";
-        return jdbcTemplate.update(sql);
+        int result = sqlSession.insert("Board.insertBoard", vo);
+        return result;
     }
-    public int deleteBoard(int seq) {
-        String sql = "delete from BOARD where seq = " + seq;
-        return jdbcTemplate.update(sql);
-    }
+
     public int updateBoard(BoardVO vo) {
-        String sql = "update BOARD set bookTitle ='"
-                + vo.getBookTitle() + "',"
-                + " bookTitle='" + vo.getBookTitle() + "',"
-                + " bookWriter='" + vo.getBookWriter() + "',"
-                + " publisher='" + vo.getPublisher() + "',"
-//                + " genre='" + vo.getGenre() + "',"
-                + " publicationDate='" + vo.getPublicationDate() + "',"
-                + " regNumber='" + vo.getRegNumber() + "',"
-                + " isbn='" + vo.getIsbn() + "',"
-                + " leftBook='" + vo.getLeftBook() + "' where seq =" + vo.getSeq();
-        return jdbcTemplate.update(sql);
+        int result = sqlSession.update("Board.updateBoard", vo);
+        return result;
+    }
+    public int deleteBoard(int id) {
+        int result = sqlSession.delete("Board.deleteBoard", id);
+        return result;
     }
 
-    class BoardRowMapper implements RowMapper<BoardVO>{
-        @Override
-        public BoardVO mapRow(ResultSet rs, int rowNum) throws SQLException{
-            BoardVO vo = new BoardVO();
-            vo.setSeq(rs.getInt("seq"));
-            vo.setBookTitle(rs.getString("bookTitle"));
-            vo.setBookWriter(rs.getString("bookWriter"));
-            vo.setPublisher(rs.getString("publisher"));
-//            vo.setGenre(rs.getString("genre"));
-            vo.setPublicationDate(rs.getDate("publicationDate"));
-            vo.setRegNumber(rs.getString("regNumber"));
-            vo.setIsbn(rs.getString("isbn"));
-            vo.setLeftBook(rs.getInt("leftBook"));
-            return vo;
-        }
-    }
     public BoardVO getBoard(int seq) {
-        String sql = "select * from BOARD where seq=" + seq;
-        return jdbcTemplate.queryForObject(sql, new BoardRowMapper());
-
+        BoardVO one = sqlSession.selectOne("Board.getBoard", seq);
+        return one;
     }
     public List<BoardVO> getBoardList() {
-        String sql = "select * from BOARD order by publicationDate desc";
-        return jdbcTemplate.query(sql, new BoardRowMapper());
+        List<BoardVO> list = sqlSession.selectList("Board.getBoardList");
+        return list;
     }
 }

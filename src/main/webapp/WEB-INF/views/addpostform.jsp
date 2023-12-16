@@ -19,7 +19,7 @@
 <%--    <tr><td>장르</td><td><input type="radio" name="genre" value="추리"/><input type="radio" name="genre" value="스릴러"/><input type="radio" name="genre" value="공포"/><input type="radio" name="genre" value="과학"/><input type="radio" name="genre" value="고전"/><input type="radio" name="genre" value="판타지"/></td></tr>--%>
     <tr><td>등록번호</td><td><input type="text" name="regNumber"/></td></tr>
     <tr><td>ISBN</td><td><input type="text" name="isbn"/></td></tr>
-    <tr><td>남은 책 갯수</td><td><input type="number" name="leftBook"/></td></tr>
+    <tr><d>남은 책 갯수</d><td><input type="number" name="leftBook"/></td></tr>
     <input type="hidden" name="publicationDate" value="<%= new java.text.SimpleDateFormat("yyyy-MM-dd").format(new java.util.Date()) %>">
   </table>
   <button type="submit">책 등록하기</button>
