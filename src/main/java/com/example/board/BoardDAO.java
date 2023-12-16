@@ -30,7 +30,7 @@ public class BoardDAO {
         return result;
     }
     public BoardVO getBoard(int seq) {
-        BoardVO one = sqlSession.selectOne("Board.insertBoard", seq);
+        BoardVO one = sqlSession.selectOne("Board.getBoard", seq);
         return one;
     }
     public List<BoardVO> getBoardList() {
